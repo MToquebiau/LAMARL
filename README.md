@@ -1,5 +1,7 @@
 # Language-Augmented-MADRL
 
+Code for paper *"Towards Language-Augmented Multi-Agent Deep Reinforcement Learning"*, Toquebiau et al., 2025, presented at ECAI 2025.
+
 ## Compared approaches
 
 The training script can be launched with different algorithms for learning communication, controlled by the `comm_type` argument that can be set as:
@@ -15,3 +17,20 @@ The training script can be launched with different algorithms for learning commu
 * `obs`: Agents communicate their local observation to other agents.
 * `no_comm+lang`: Agents do not communicate but they learn the language modules anyway, allowing to have some grounding of representation learning in language concepts.
 * `perfect+no_lang`: Agents communicate "perfect" messages given by the oracle, but they do not have gradients from language tasks flowing into the agents' policy. They do not learn the decoder. They do learn a language encoder in order to encode the incoming messages, but no gradients from RL flow into the language encoder. 
+
+
+## To cite
+
+```
+@InProceedings{Toquebiau2025_LAMARL,
+  author    = {Toquebiau, Maxime and Jun, Jae-Yun and Benamar, Faïz and Bredeche, Nicolas},
+  booktitle = {28th European Conference on Artificial Intelligence, 25-30 October 2025, Bologna, Italy – Including 14th Conference on Prestigious Applications of Intelligent Systems (PAIS 2025)},
+  title     = {Towards Language-Augmented Multi-Agent Deep Reinforcement Learning},
+  year      = {2025},
+  series    = {Frontiers in Artificial Intelligence and Applications},
+  volume    = {413},
+  doi       = {10.3233/FAIA251260},
+  file      = {:FAIA-413-FAIA251260.pdf:PDF},
+  groups    = {My Papers, Comm in MADRL},
+}
+```
